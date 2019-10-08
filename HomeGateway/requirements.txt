@@ -1,0 +1,4 @@
+setuptools==40.8.0
+pip==19.2.3
+paho-mqtt
+jsonify

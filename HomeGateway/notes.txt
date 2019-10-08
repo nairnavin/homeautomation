@@ -1,0 +1,11 @@
+mosquitto_sub -h 85.119.83.194 -p 1883 -t premise/# -v
+
+docker run -d -p 8086:8086 -p 8083:8083 -e INFLUXDB_ADMIN_ENABLED=true --name=influxdb -v influxdb:/var/lib/influxdb influxdb
+
+docker exec -it influxdb influx
+
+use DeviceDataDB
+select * from smartmeter
+./ngrok tcp 8086
+
+docker run -d -p 3000:3000 -v grafana:/var/lib/grafana --name=grafana grafana/grafana
