@@ -1,0 +1,18 @@
+{
+  "deviceInfo" : {
+    "name" : "",
+    "type" : "",
+    "make" : "",
+    "model" : "",
+    "version" : "",
+    "otherDetails" : ""
+  },
+  "deviceState" : {
+    "status" : "",
+    "value" : ""
+  },
+  "deviceControl" : {
+    "status" : "",
+    "value" : ""
+  }
+}
